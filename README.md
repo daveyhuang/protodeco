@@ -16,7 +16,7 @@ f = Foo()
 #    dumps_proto: serialized string.
 
 
-message_str = d.dumps_proto()
+message_str = f.dumps_proto()
 
 
 @loads_proto(message_str, MESSAGE)
@@ -27,3 +27,9 @@ b = Bar()
 # now, b has the property passed by message_str
 
 ```
+
+
+## Notice
+
+test 文件夹中的 proto 定义只是 用来测试 消息嵌套 的。
+在实际情况中应该避免那种 会导致 **无限嵌套** 的定义
