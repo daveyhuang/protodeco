@@ -1,0 +1,18 @@
+package protodeco.example;
+
+message Pets {
+    enum Kind {
+        DOG = 1;
+        CAT = 2;
+    }
+
+    required Kind kind = 1;
+    optional string name = 2;
+    repeated Food favorite_food = 3;
+}
+
+
+message Food {
+    required string name = 1;
+    optional int32 price = 2;
+}
